@@ -80,17 +80,21 @@ jupyter notebook inference.ipynb
 * Additional datasets and loaders will be wired in with the training pipeline update.
 
 ---
-<!--  
 ## Project Structure (current)
 
 ```
-├── inference.ipynb         # Example inference workflow on Bijie
-├── requirements.txt        # See “Requirements” above
-└── (code and training pipeline coming soon)
+└── \datset\                                  # Dataset preprocessing
+└── \models\                                  # Models, Loss and metrics
+└── \rrain\                                   # Training
+└── \utils\                                   # Evaluate and plot
+└── LS_segmentation_landslide4sense.ipynb     # Train on LandSlide4Sense dataset
+├── inference.ipynb                           # Example inference workflow on Bijie
+├── backbones.ipynb                           # Test computational efficieny on trained weigths
+└── LS_segmentation_bijie.ipynb               # Train on Bijie dataset
 ```
 
 ---
-
+<!--  
 ## Citation
 
 If you find this useful, please cite (placeholder):
