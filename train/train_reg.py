@@ -1,7 +1,7 @@
 import os
 import numpy as np
 from datetime import datetime
-from config import Config
+from .config import Config
 
 import torch
 from torch import nn
@@ -9,8 +9,8 @@ from torch.optim import Adam
 from torch.utils.data import DataLoader
 from tqdm import tqdm
 
-from models import SegmentationLosses
-from models import compute_dice_score, compute_iou_score
+from models.smp_loss import SegmentationLosses
+from models.smp_metrics import compute_dice_score, compute_iou_score
 
 criterion = SegmentationLosses(loss_name='tversky', mode='binary', alpha=0.3, beta=0.7)
 

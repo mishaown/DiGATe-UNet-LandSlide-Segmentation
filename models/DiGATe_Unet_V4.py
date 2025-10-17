@@ -136,7 +136,7 @@ class GateFuse(nn.Module):
 
 
 # --------------------- model ---------------------
-class DiGATe_Unet(nn.Module):
+class DiGATe_Unet_V4(nn.Module):
     """
     Args:
         n_classes: output channels
@@ -268,7 +268,7 @@ if __name__ == "__main__":
     dev = "cuda" if torch.cuda.is_available() else "cpu"
 
     # Example: shared ResNet101, 3-ch inputs
-    m = DiGATe_Unet(
+    m = DiGATe_Unet_V4(
         n_classes=1,
         backbone="mobilenetv3_small_100", #tf_efficientnet_b4
         n_channels=3,
